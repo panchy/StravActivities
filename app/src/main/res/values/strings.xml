@@ -1,0 +1,11 @@
+<resources>
+    <string name="font_roboto_regular" translatable="false">font/Roboto-Regular.ttf</string>
+
+    <string name="app_name">StravActivities</string>
+    <string name="not_logged_in">You are not logged in.\nYou must log in to use this application.</string>
+    <string name="login_with_strava">Login with Strava</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="commute">Commute</string>
+    <string name="no_data">No Data Available</string>
+    <string name="no_connection">Device has no internet connection.\nData below might not be up to date.</string>
+</resources>

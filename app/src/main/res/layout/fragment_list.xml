@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <FrameLayout
+            android:id="@+id/layoutOfflineMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewOfflineMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/no_connection"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutOfflineMode">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAthleteActivities"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+
+    <include layout="@layout/layout_loading" />
+
+</FrameLayout>
