@@ -33,7 +33,7 @@ class AuthActivity : BaseActivityWithDI() {
             finish()
         } else if (authUtils.refreshToken != null) {
             startActivity(Intent(this, OAuthCodeHandlerActivity::class.java))
-            finish()
+            //Do not finish this activity because onResume will be used to launch main activity after retrieving access_token
         }
     }
 }
